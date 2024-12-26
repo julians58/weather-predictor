@@ -1,6 +1,6 @@
 # Desarrollo
 
-Para el desarrollo de la aplicacion se uso el lenguaje de programacion Golang, haciendo uso de Gin-gonic como libreria para levantar el REST API y para la base de datos se use SQLite.
+Para el desarrollo de la aplicacion se uso el lenguaje de programacion Golang, haciendo uso de Gin-gonic como libreria para levantar el REST API y para la base de datos se uso SQLite junto a gorm como ORM para practicidad con las queries SQL.
 
 ## Para tener en cuenta
 
@@ -19,4 +19,28 @@ Instalar dependencias :
 Correr aplicacion:
 
     go run main.go
+Esto creara una base de datos 'weather.db' local
 
+Para ver el registro de todos los dias de los 10 años:
+
+    http://localhost:8080/weather
+Para ver la condicion climatica de un dia particular (En el ejemplo veriamos el primer dia de todos donde todos los planetas parten alineados con angulo 0 y en condicion de sequia):
+
+    http://localhost:8080/weather/1
+
+Para ver por climas:
+
+    http://localhost:8080/days/Lluvia
+
+Para ver las estadisticas:
+
+    http://localhost:8080/weather-statistics
+
+Tener en cuenta que existen los siguientes climas:
+| Clima | Particularidad |
+|--|--|
+| Sequia |Planetas alineados entre si y con el sol  |
+|Lluvia|Planetas formando triangulo con sol en su interior|
+|Pico de lluvia|Perimetro maximo de un periodo de lluvia|
+|Condiciones normales|Planetas formando un triangulo sin el sol en su interior|
+|Condiciones optimas de presion y temperatura|Planetas alineado entre si pero no con el origen|
