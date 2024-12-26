@@ -16,8 +16,8 @@ func Init() error {
 		return err // Return the error to the caller
 	}
 
-	// Auto-migrate the Weather model
-	if err := DB.AutoMigrate(&models.Weather{}); err != nil {
+	// Auto-migrate the Weather and WeatherStatistics models
+	if err := DB.AutoMigrate(&models.Weather{}, &models.WeatherStatistics{}); err != nil {
 		return err // Return the error if migration fails
 	}
 

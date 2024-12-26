@@ -1,7 +1,6 @@
 package services
 
 import (
-	"fmt"
 	"math"
 
 	"github.com/julians58/weather-predictor/internal/helpers"
@@ -58,7 +57,6 @@ func CalculateWeather(day int, maxPerimeter *float64, rainBelowPeak *bool) (mode
 		*maxPerimeter = 0.0
 	}
 
-	fmt.Printf("day: %d, condition: %s\n", day+1, weatherCondition)
 	return models.Weather{
 		Day:       day + 1,
 		Condition: weatherCondition,

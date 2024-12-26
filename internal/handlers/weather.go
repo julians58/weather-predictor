@@ -37,6 +37,17 @@ func GetWeather(c *gin.Context) {
 	c.JSON(http.StatusOK, weather)
 }
 
+func GetWeatherStatistics(c *gin.Context) {
+	var stats models.WeatherStatistics
+	result := db.DB.Last(&stats)
+	if result.Error != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "Statistics not found"})
+		return
+	}
+
+	c.JSON(http.StatusOK, stats)
+}
+
 func GetDaysWithCondition(c *gin.Context) {
 	condition := c.Param("condition")
 
