@@ -9,6 +9,17 @@ import (
 	"github.com/julians58/weather-predictor/internal/models"
 )
 
+func GetAllWeather(c *gin.Context) {
+	var weatherData []models.Weather
+	result := db.DB.Find(&weatherData)
+	if result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": result.Error.Error()})
+		return
+	}
+
+	c.JSON(http.StatusOK, weatherData)
+}
+
 func GetWeather(c *gin.Context) {
 	day, err := strconv.Atoi(c.Param("day"))
 	if err != nil {
