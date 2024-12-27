@@ -44,3 +44,7 @@ Tener en cuenta que existen los siguientes climas:
 |Pico de lluvia|Perimetro maximo de un periodo de lluvia|
 |Condiciones normales|Planetas formando un triangulo sin el sol en su interior|
 |Condiciones optimas de presion y temperatura|Planetas alineado entre si pero no con el origen|
+
+## Data en 10 años
+    {"ID":1,"drought_periods":41,"rain_periods":61,"optimal_periods":122,"rain_peak_days":"[25,73,155,205,253,335,385,433,515,565,613,695,745,793,875,925,973,1055,1105,1153,1235,1285,1333,1415,1465,1513,1595,1645,1693,1775,1825,1873,1955,2005,2053,2135,2185,2233,2315,2365,2413,2495,2545,2593,2675,2725,2773,2855,2905,2953,3035,3085,3133,3215,3265,3313,3395,3445,3493,3575,3625]"}
+Periodos de - Sequia: 41, Lluvia: 61, Optimas condiciones: 122
